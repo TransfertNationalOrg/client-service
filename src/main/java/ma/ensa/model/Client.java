@@ -10,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Date;
+import java.util.Set;
 
 @Data
 @Entity
@@ -33,5 +34,8 @@ public class Client {
     private String ville;
     private Long gsm;
     private String email;
+
+
+    protected Set<Long> transfertsIds;
 
 }
