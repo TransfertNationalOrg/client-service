@@ -1,21 +1,14 @@
-package ma.ensa.model;
+package ma.ensa.dto;
 
 import lombok.Data;
 import ma.ensa.model.enumer.IDENTITE;
 import ma.ensa.model.enumer.PAYS;
 import ma.ensa.model.enumer.TITRE;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import java.util.Date;
 
 @Data
-@Entity
-public class Client {
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+public class ClientDTO {
     private Long id;
 
     private TITRE titre;
