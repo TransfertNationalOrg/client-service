@@ -5,6 +5,7 @@ import ma.ensa.Transfert.TransfertDTO;
 import ma.ensa.Transfert.TransfertFeign;
 import ma.ensa.converter.ClientConverter;
 import ma.ensa.dto.ClientDTO;
+import ma.ensa.repository.ClientRepository;
 import ma.ensa.service.ClientService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,6 +20,8 @@ public class ClientController {
     final ClientService clientService;
     final ClientConverter clientConverter;
     final TransfertFeign transfertFeign;
+
+    final ClientRepository clientRepository;
 
     @PostMapping("/")
     public ResponseEntity<?> save(@RequestBody ClientDTO clientDTO) throws Exception {
@@ -53,5 +56,11 @@ public class ClientController {
     @GetMapping("/allTransferts/{idClient}")
     public List<TransfertDTO> getAllTransfertsByClient(@PathVariable("idClient") Long idClient){
         return transfertFeign.getTransfertsByClient(idClient);
+    }
+
+    //Get client by id
+    @GetMapping("{id}")
+    public ClientDTO getClientById(@PathVariable("id") Long id){
+        return clientConverter.convertToDTO(clientRepository.getById(id));
     }
 }
