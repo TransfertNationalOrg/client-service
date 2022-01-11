@@ -10,11 +10,11 @@ import java.util.Date;
 public class Compte {
     @Id
     @GeneratedValue
-    private int id;
-    private double solde;
-    private Date date;
+    protected int id;
+    protected double solde;
+    protected Date date;
     @ManyToOne
     @JoinColumn(name = "client_id")
-    private Client client;
+    protected Client client;
 
 }
