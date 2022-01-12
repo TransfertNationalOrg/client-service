@@ -1,16 +1,12 @@
-package ma.ensa.model;
+package ma.ensa.dto;
 
 import lombok.Data;
-
-import javax.persistence.*;
 import java.util.Date;
 
-@Entity
 @Data
-public class Compte {
-    @Id
-    @GeneratedValue
-    protected Long id;
+public class CompteDTO {
+
+    protected int id;
     protected double solde;
     protected Date date;
     protected Long idClient;

@@ -10,4 +10,7 @@ import java.util.List;
 public interface TransfertFeign {
     @GetMapping("/transfert/client/{idClient}")
     List<TransfertDTO> getTransfertsByClient(@PathVariable("idClient") Long idClient);
+
+    @GetMapping("/transfert/compte/{idCompte}")
+    List<TransfertDTO> getTransfertsByCompte(@PathVariable("idCompte") Long idCompte);
 }
