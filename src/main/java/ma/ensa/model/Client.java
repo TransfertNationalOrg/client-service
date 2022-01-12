@@ -36,6 +36,6 @@ public class Client {
     protected String email;
 
 
-    protected Set<Long> transfertsIds;
+    //protected Set<Long> transfertsIds;
 
 }
