@@ -17,9 +17,9 @@ import java.util.List;
 @RequestMapping("client")
 @Data
 public class ClientController {
-    final ClientService clientService;
-    final ClientConverter clientConverter;
-    final TransfertFeign transfertFeign;
+    private final ClientService clientService;
+    private final ClientConverter clientConverter;
+    private final TransfertFeign transfertFeign;
 
     final ClientRepository clientRepository;
 
