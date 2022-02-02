@@ -34,8 +34,7 @@ public class Client {
     protected String ville;
     protected Long gsm;
     protected String email;
-
-
+    protected String password;
     //protected Set<Long> transfertsIds;
 
 }
