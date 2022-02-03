@@ -11,4 +11,6 @@ public interface ClientService {
     Client update(Client client) throws NotFoundException;
     Long delete(Long id) throws NotFoundException;
     List<Client> findAll();
+
+    Client findByEmail(String email);
 }
