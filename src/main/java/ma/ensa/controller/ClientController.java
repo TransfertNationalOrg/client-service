@@ -90,7 +90,7 @@ public class ClientController {
     }
 
     //Get current client
-    @GetMapping("/")
+    @GetMapping("/currentClient")
     public ResponseEntity<?> getCurrentClient(){
         return ResponseEntity.ok().body(currentClientConverter.convertToDTO((currentClientRepository.findById(1L).get())));
     }
